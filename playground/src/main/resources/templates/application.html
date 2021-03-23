@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Upload</title>
+</head>
+<body>
+<div>
+    <h3>Upload Files</h3>
+    <form id="uploadApplication" name="uploadApplication" method="post" th:action=@{/uploadApp} encType="multipart/form-data">
+        First Name <input type="text" name="firstName"/><br>
+        Last Name<input type="text" name="lastName" /><br>
+        Email Address<input type="text" name="emailAddress" /><br>
+        Phone Number<input type="text" name="phoneNumber" /><br>
+        <select name = "applicationType">
+            <option>APPLICATION_A</option>
+            <option>APPLICATION_B</option>
+            <option>APPLICATION_C</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
+<!--String firstName, String lastName, String emailAddress, String phoneNumber, ApplicationType applicationType-->
